@@ -5,7 +5,7 @@ import { NewsItem } from '../types';
 const API_CONFIG = {
   LOCAL: 'http://localhost:8000/api/news/',
   LOCAL_PROD: 'http://localhost:3001/api/news/',
-  PROD: 'https://t-minigames-fhbv.onrender.com/api/news/',
+  PROD: 'https://giftpropaganda-14ag.onrender.com/api/news/',
   TIMEOUT: 3000,
   RETRY_ATTEMPTS: 1,
   RETRY_DELAY: 300
