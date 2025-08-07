@@ -5,16 +5,22 @@
 
 import requests
 import json
+import os
+from dotenv import load_dotenv
+
+# Загружаем переменные окружения
+load_dotenv()
 
 def update_bot_webhook():
     """Обновляем webhook бота"""
     print("🔄 Обновление webhook бота...")
     
-    # Токен бота
-    token = "8429342375:AAFl55U3d2jiq3bm4UNTyDrbB0rztFTio2I"
+    # Токен бота из переменных окружения
+    token = os.getenv("TELEGRAM_BOT_TOKEN") or os.getenv("TOKEN", "8429342375:AAFl55U3d2jiq3bm4UNTyDrbB0rztFTio2I")
     
-    # URL для webhook (локальный для тестирования)
-    webhook_url = "https://giftpropaganda-14ag.onrender.com/webhook"
+    # URL для webhook из переменных окружения
+    webhook_base = os.getenv("WEBHOOK_URL", "https://giftpropaganda-14ag.onrender.com")
+    webhook_url = f"{webhook_base.rstrip('/')}/webhook"
     
     try:
         # Получаем текущий webhook
