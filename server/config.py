@@ -8,7 +8,7 @@ DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./giftpropaganda.db")
 
 # Настройки Telegram Bot
 TOKEN = os.getenv("TOKEN") or os.getenv("TELEGRAM_BOT_TOKEN", "8429342375:AAFl55U3d2jiq3bm4UNTyDrbB0rztFTio2I")
-WEBHOOK_URL = os.getenv("WEBHOOK_URL", "https://t-minigames.onrender.com")
+WEBHOOK_URL = os.getenv("WEBHOOK_URL", "https://t-minigames-fhbv.onrender.com")
 
 # Настройки Redis (если используется)
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
